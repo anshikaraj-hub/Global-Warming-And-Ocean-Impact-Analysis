@@ -6,6 +6,7 @@ import pandas as pd
 BASE_DIR=os.path.dirname(os.path.abspath(__file__))
 DATA_DIR=os.path.join(BASE_DIR,"..","data")
 
+#data loading function 1
 def load_global_temperatures(filepath=None):
     if filepath is None:
         filepath=os.path.join(DATA_DIR, "GlobalTemperatures.csv")
@@ -24,11 +25,8 @@ def load_country_temperatures(filepath=None):
     print(f"Missing values in GlobalLandTemperaturesByCountry: \n{df.isnull().sum()}")
     return df
 
-if __name__=="__main__":
-    global_temps = load_global_temperatures()
-    country_temps = load_country_temperatures()
 
-#Data Cleaning
+#Data Cleaning function 2
 def clean_data(df, dataset_type):
     
     #converting dt to datetime
@@ -57,5 +55,11 @@ def clean_data(df, dataset_type):
     #Return clean DataFrame
     return df
 
-clean_global_temps = clean_data(global_temps, "global")
-clean_country_temps = clean_data(country_temps, "country")
+
+#main function
+if __name__=="__main__":
+    global_temps = load_global_temperatures()
+    country_temps = load_country_temperatures()
+
+    clean_global_temps = clean_data(global_temps, "global")
+    clean_country_temps = clean_data(country_temps, "country")    
