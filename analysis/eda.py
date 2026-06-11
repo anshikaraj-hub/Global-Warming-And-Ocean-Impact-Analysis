@@ -78,8 +78,6 @@ def top_warming_countries(df):
     return warming.sort_values(ascending=False).head(10)
 
 
-
-
 #Month which is consistently the hottest/coldest globally
 def seasonal_analysis(df):
     monthly_avg = df.groupby(df['dt'].dt.month)['LandAverageTemperature'].mean().reset_index()
