@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
-import data_loader as dl
 import calendar
+
+import data_loader as dl
 
 #Yearly average temperatures
 def calculate_yearly_averages(df, column_name):
