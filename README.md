@@ -98,4 +98,4 @@ View the full analysis with interactive Plotly charts on Kaggle:
 
 [🌍 Global Warming and Ocean Impact Analysis (1750-2015)]
 
-(https://www.kaggle.com/code/anshikarajhub/global-warming-and-ocean-impact-analysis-1750-201)
+(https://www.kaggle.com/code/anshikarajhub/global-warming-and-ocean-impact-analysis)
